@@ -1,0 +1,16 @@
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csproj.CopyComplete
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.pdb
