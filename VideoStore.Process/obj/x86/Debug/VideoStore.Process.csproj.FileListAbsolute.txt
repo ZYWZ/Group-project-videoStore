@@ -242,3 +242,4 @@ C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Process\bin\Debug\System.W
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Process\obj\x86\Debug\VideoStore.Process.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Process\obj\x86\Debug\VideoStore.Process.exe
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Process\obj\x86\Debug\VideoStore.Process.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Process\bin\Debug\AutoMapper.Net4.dll

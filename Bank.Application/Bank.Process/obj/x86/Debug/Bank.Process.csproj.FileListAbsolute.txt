@@ -68,3 +68,4 @@ C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Application\Bank.Process\bin\Deb
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Application\Bank.Process\obj\x86\Debug\Bank.Process.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Application\Bank.Process\obj\x86\Debug\Bank.Process.exe
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Application\Bank.Process\obj\x86\Debug\Bank.Process.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Application\Bank.Process\bin\Debug\Bank.Business.Components.dll.config

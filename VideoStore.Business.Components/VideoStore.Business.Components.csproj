@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TransferNotificationProvider.cs" />
     <Compile Include="UserProvider.cs" />
     <Compile Include="OrderProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

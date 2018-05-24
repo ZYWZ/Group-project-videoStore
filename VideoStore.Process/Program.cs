@@ -17,16 +17,27 @@ using System.Transactions;
 using System.ServiceModel.Description;
 using VideoStore.Business.Components.Interfaces;
 using VideoStore.WebClient.CustomAuth;
+using System.Messaging;
 
 namespace VideoStore.Process
 {
     public class Program
     {
+        private static readonly String sPublishQueuePath = ".\\private$\\BankTransferNotificationTransacted";
+
         static void Main(string[] args)
         {
+            EnsureMessageQueuesExists();
             ResolveDependencies();
             InsertDummyEntities();
             HostServices();
+        }
+
+        private static void EnsureMessageQueuesExists()
+        {
+            // Create the transacted MSMQ queue if necessary.
+            if (!MessageQueue.Exists(sPublishQueuePath))
+                MessageQueue.Create(sPublishQueuePath, true);
         }
 
         private static void InsertDummyEntities()

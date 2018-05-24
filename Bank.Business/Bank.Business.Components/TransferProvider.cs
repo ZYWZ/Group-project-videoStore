@@ -30,14 +30,19 @@ namespace Bank.Business.Components
                     lContainer.ObjectStateManager.ChangeObjectState(lFromAcct, System.Data.EntityState.Modified);
                     lContainer.ObjectStateManager.ChangeObjectState(lToAcct, System.Data.EntityState.Modified);
                     lContainer.SaveChanges();
-                    lScope.Complete();
 
                     Console.WriteLine("Transfered sucessfully! This payment cost : " + pAmount);
+                    TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
+                    lClient.NotifyTransferResult(true, "Transfer successful! The amount is "+pAmount);
+
+                    lScope.Complete();
 
                 }
                 catch (Exception lException)
                 {
                     Console.WriteLine("Error occured while transferring money:  " + lException.Message);
+                    TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
+                    lClient.NotifyTransferResult(false, "Transfer failed!");
                     throw;
 
                 }

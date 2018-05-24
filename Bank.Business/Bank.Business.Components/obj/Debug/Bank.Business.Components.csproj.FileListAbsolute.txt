@@ -35,3 +35,4 @@ C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Component
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.dll.config

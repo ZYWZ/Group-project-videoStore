@@ -63,6 +63,7 @@
     <Compile Include="DeliveryNotificationService.cs" />
     <Compile Include="MessageTypeConverter.cs" />
     <Compile Include="RoleService.cs" />
+    <Compile Include="TransferNotificationService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="OrderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
