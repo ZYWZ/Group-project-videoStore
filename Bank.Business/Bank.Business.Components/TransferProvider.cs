@@ -23,27 +23,30 @@ namespace Bank.Business.Components
                 {
                     Account lFromAcct = GetAccountFromNumber(pFromAcctNumber);
                     Account lToAcct = GetAccountFromNumber(pToAcctNumber);
-                    lFromAcct.Withdraw(pAmount);
-                    lToAcct.Deposit(pAmount);
-                    lContainer.Attach(lFromAcct);
-                    lContainer.Attach(lToAcct);
-                    lContainer.ObjectStateManager.ChangeObjectState(lFromAcct, System.Data.EntityState.Modified);
-                    lContainer.ObjectStateManager.ChangeObjectState(lToAcct, System.Data.EntityState.Modified);
-                    lContainer.SaveChanges();
+                    if (lFromAcct.Withdraw(pAmount))
+                    {
+                        lToAcct.Deposit(pAmount);
+                        lContainer.Attach(lFromAcct);
+                        lContainer.Attach(lToAcct);
+                        lContainer.ObjectStateManager.ChangeObjectState(lFromAcct, System.Data.EntityState.Modified);
+                        lContainer.ObjectStateManager.ChangeObjectState(lToAcct, System.Data.EntityState.Modified);
+                        lContainer.SaveChanges();
 
-                    Console.WriteLine("Transfered sucessfully! This payment cost : " + pAmount);
-                    TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
-                    lClient.NotifyTransferResult(true, "Transfer successful! The amount is "+pAmount);
-
+                        Console.WriteLine("Transfered sucessfully! This payment cost : " + pAmount);
+                        TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
+                        lClient.NotifyTransferResult(true, "Transfer successful! The amount is " + pAmount);
+                    }
+                    else {
+                        Console.WriteLine("Transfered failed!");
+                        TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
+                        lClient.NotifyTransferResult(false, "Transfer failed! Please check your bank account balance!");
+                    }
                     lScope.Complete();
 
                 }
                 catch (Exception lException)
                 {
-                    Console.WriteLine("Error occured while transferring money:  " + lException.Message);
-                    TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
-                    lClient.NotifyTransferResult(false, "Transfer failed!");
-                    Console.WriteLine("catch ends!  ");
+                    Console.WriteLine("Error occured while transferring money:  " + lException.Message);     
                     throw;
                 }
                 finally

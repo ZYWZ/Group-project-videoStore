@@ -17,6 +17,7 @@ namespace VideoStore.Business.Components
 
         public void NotifyTransferResult(bool pResult, string pDescription) {
             Console.WriteLine(pDescription);
+
         }
     }
 }

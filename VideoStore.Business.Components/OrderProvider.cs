@@ -33,13 +33,11 @@ namespace VideoStore.Business.Components
                 {
                     try
                     {
-                        pOrder.OrderNumber = Guid.NewGuid();
-
-                        pOrder.UpdateStockLevels();
+                        pOrder.OrderNumber = Guid.NewGuid();                     
 
                         TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0);
 
-                        
+                        pOrder.UpdateStockLevels();
 
                         PlaceDeliveryForOrder(pOrder);
                         lContainer.Orders.ApplyChanges(pOrder);

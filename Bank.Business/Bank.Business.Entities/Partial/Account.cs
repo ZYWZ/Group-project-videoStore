@@ -7,13 +7,15 @@ namespace Bank.Business.Entities
 {
     public partial class Account
     {
-        public void Withdraw(double pAmount)
+        public bool Withdraw(double pAmount)
         {
             if (this.Balance < pAmount)
             {
-                throw new Exception("Insufficient funds to make withdrawal from " + this.AccountNumber);
+                //  throw new Exception("Insufficient funds to make withdrawal from " + this.AccountNumber);
+                return false;
             }
             Balance -= pAmount;
+            return true;
         }
 
         public void Deposit(double pAmount)
