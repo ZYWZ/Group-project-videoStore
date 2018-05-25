@@ -1,4 +1,4 @@
-﻿using DeliveryCo.Services.Interfaces;
+﻿using VideoStore.Services.Interfaces;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace VideoStore.Services
             get { return ServiceLocator.Current.GetInstance<IDeliveryNotificationProvider>(); }
         }
 
-        public void NotifyDeliveryCompletion(Guid pDeliveryId, DeliveryInfoStatus status)
+        public void NotifyDeliveryCompletion(Guid pDeliverId, DeliveryInfoStatus status)
         {
-            Provider.NotifyDeliveryCompletion(pDeliveryId, GetDeliveryStatusFromDeliveryInfoStatus(status));
+            Provider.NotifyDeliveryCompletion(pDeliverId, GetDeliveryStatusFromDeliveryInfoStatus(status));
         }
 
         private DeliveryStatus GetDeliveryStatusFromDeliveryInfoStatus(DeliveryInfoStatus status)

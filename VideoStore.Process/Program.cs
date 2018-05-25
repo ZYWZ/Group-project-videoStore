@@ -24,6 +24,7 @@ namespace VideoStore.Process
     public class Program
     {
         private static readonly String sPublishQueuePath = ".\\private$\\BankTransferNotificationTransacted";
+        private static readonly String sPublishQueuePath2 = ".\\private$\\DeliveryNotificationTransacted";
 
         static void Main(string[] args)
         {
@@ -38,6 +39,8 @@ namespace VideoStore.Process
             // Create the transacted MSMQ queue if necessary.
             if (!MessageQueue.Exists(sPublishQueuePath))
                 MessageQueue.Create(sPublishQueuePath, true);
+            if (!MessageQueue.Exists(sPublishQueuePath2))
+                MessageQueue.Create(sPublishQueuePath2, true);
         }
 
         private static void InsertDummyEntities()
@@ -79,7 +82,7 @@ namespace VideoStore.Process
                     {
                         Director = "Rene Clair",
                         Genre = "Fiction",
-                        Price = 20.0,
+                        Price = 3000000.0,
                         Title = "And Then there were None"
                     };
 
@@ -89,7 +92,7 @@ namespace VideoStore.Process
                     Stock lGreatExpectationsStock = new Stock()
                     {
                         Media = lGreatExpectations,
-                        Quantity = 5,
+                        Quantity = 50,
                         Warehouse = "Neutral Bay"
                     };
 

@@ -130,9 +130,11 @@ namespace VideoStore.Business.Components
                 OrderNumber = lDelivery.Order.OrderNumber.ToString(),
                 SourceAddress = lDelivery.SourceAddress,
                 DestinationAddress = lDelivery.DestinationAddress,
-                DeliveryNotificationAddress = "net.tcp://localhost:9010/DeliveryNotificationService"
+                DeliveryNotificationAddress = "net.tcp://localhost:9010/DeliveryNotificationService",
+                DeliveryIdentifier = identifier
             });
             lDelivery.ExternalDeliveryIdentifier = identifier;
+          //  Console.WriteLine("External : "+ lDelivery.ExternalDeliveryIdentifier);
             pOrder.Delivery = lDelivery;
 
         }
@@ -147,7 +149,7 @@ namespace VideoStore.Business.Components
             }
             catch(Exception e)
             {
-                throw new Exception("Error Transferring funds for order.");
+                throw new Exception("Error Transferring funds for order."+e.Message);
             }
         }
 

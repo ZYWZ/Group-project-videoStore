@@ -78,3 +78,10 @@ C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Pro
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\obj\x86\Debug\DeliveryCo.Process.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\obj\x86\Debug\DeliveryCo.Process.exe
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\obj\x86\Debug\DeliveryCo.Process.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\VideoStore.Services.Interfaces.dll
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\VideoStore.Services.MessageTypes.dll
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\DeliveryCo.Business.Components.dll.config
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\VideoStore.Services.Interfaces.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\VideoStore.Services.MessageTypes.pdb
+C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Application\DeliveryCo.Process\bin\Debug\Microsoft.AspNet.Identity.Core.xml

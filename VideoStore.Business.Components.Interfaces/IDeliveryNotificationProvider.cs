@@ -9,6 +9,6 @@ namespace VideoStore.Business.Components.Interfaces
     public interface IDeliveryNotificationProvider
     {
 
-        void NotifyDeliveryCompletion(Guid pDeliveryId, DeliveryStatus status);
+        void NotifyDeliveryCompletion(Guid pDeliverId, DeliveryStatus status);
     }
 }

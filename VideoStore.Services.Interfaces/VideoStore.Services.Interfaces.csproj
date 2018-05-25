@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICatalogueService.cs" />
+    <Compile Include="IDeliveryNotificationService.cs" />
     <Compile Include="IRoleService.cs" />
     <Compile Include="ITransferNotificationService.cs" />
     <Compile Include="IUserService.cs" />

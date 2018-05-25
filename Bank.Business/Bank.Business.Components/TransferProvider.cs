@@ -18,7 +18,7 @@ namespace Bank.Business.Components
             using (TransactionScope lScope = new TransactionScope())
             using (BankEntityModelContainer lContainer = new BankEntityModelContainer())
             {
-
+               
                 try
                 {
                     Account lFromAcct = GetAccountFromNumber(pFromAcctNumber);
@@ -43,8 +43,12 @@ namespace Bank.Business.Components
                     Console.WriteLine("Error occured while transferring money:  " + lException.Message);
                     TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
                     lClient.NotifyTransferResult(false, "Transfer failed!");
+                    Console.WriteLine("catch ends!  ");
                     throw;
-
+                }
+                finally
+                {
+                    lScope.Dispose();
                 }
             }
         }
@@ -55,6 +59,12 @@ namespace Bank.Business.Components
             {
                 return lContainer.Accounts.Where((pAcct) => (pAcct.AccountNumber == pToAcctNumber)).FirstOrDefault();
             }
+        }
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            // Log the exception, display it, etc
+            Console.WriteLine((e.ExceptionObject as Exception).Message);
         }
     }
 }

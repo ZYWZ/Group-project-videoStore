@@ -16,10 +16,10 @@ namespace VideoStore.Business.Components
             get { return ServiceLocator.Current.GetInstance<IEmailProvider>(); }
         }
 
-        public void NotifyDeliveryCompletion(Guid pDeliveryId, Entities.DeliveryStatus status)
+        public void NotifyDeliveryCompletion(Guid pDeliverId, Entities.DeliveryStatus status)
         {
-            Order lAffectedOrder = RetrieveDeliveryOrder(pDeliveryId);
-            UpdateDeliveryStatus(pDeliveryId, status);
+            Order lAffectedOrder = RetrieveDeliveryOrder(pDeliverId);
+          //  UpdateDeliveryStatus(pDeliveryId, status);
             if (status == Entities.DeliveryStatus.Delivered)
             {
                 EmailProvider.SendMessage(new EmailMessage()
@@ -53,11 +53,12 @@ namespace VideoStore.Business.Components
             }
         }
 
-        private Order RetrieveDeliveryOrder(Guid pDeliveryId)
+        private Order RetrieveDeliveryOrder(Guid pDeliverId)
         {
  	        using(VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
             {
-                Delivery lDelivery =  lContainer.Deliveries.Include("Order.Customer").Where((pDel) => pDel.ExternalDeliveryIdentifier == pDeliveryId).FirstOrDefault();
+                Delivery lDelivery =  lContainer.Deliveries.Include("Order.Customer").Where((pDel) => pDel.ExternalDeliveryIdentifier == pDeliverId).FirstOrDefault();
+             //   Console.WriteLine("pDeliverId : "+pDeliverId);
                 return lDelivery.Order;
             }
         }

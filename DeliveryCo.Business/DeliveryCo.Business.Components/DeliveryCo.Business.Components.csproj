@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\DeliveryNotificationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DeliveryNotificationServiceFactory.cs" />
     <Compile Include="DeliveryProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +67,14 @@
       <Project>{7E7A8D7D-87CF-420F-A72B-8F4A258BB48A}</Project>
       <Name>DeliveryCo.Services.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\VideoStore.Entities\VideoStore.Business.Entities\VideoStore.Business.Entities.csproj">
+      <Project>{35992ec3-2c32-46af-aee4-491c54f681a5}</Project>
+      <Name>VideoStore.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VideoStore.Services.Interfaces\VideoStore.Services.Interfaces.csproj">
+      <Project>{17197901-bbe3-48e8-ac98-689ab9a7ed1e}</Project>
+      <Name>VideoStore.Services.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DeliveryCo.Business.Components.Interfaces\DeliveryCo.Business.Components.Interfaces.csproj">
       <Project>{4EF559A7-8607-485F-8782-273B61B720A9}</Project>
       <Name>DeliveryCo.Business.Components.Interfaces</Name>
@@ -69,6 +83,37 @@
       <Project>{378B43F5-B7BC-471A-87A9-B1656A6B1531}</Project>
       <Name>DeliveryCo.Business.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\DeliveryNotificationService\service.wsdl" />
+    <None Include="Connected Services\DeliveryNotificationService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DeliveryNotificationService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DeliveryNotificationService\VideoStore.Services.Interfaces.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DeliveryNotificationService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryNotificationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryNotificationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DeliveryNotificationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -109,4 +109,3 @@ C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Business.Components\bin\De
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Business.Components\bin\Debug\AutoMapper.pdb
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Business.Components\bin\Debug\AutoMapper.xml
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Business.Components\bin\Debug\AutoMapper.Net4.dll
