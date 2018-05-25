@@ -13,7 +13,7 @@ namespace DeliveryCo.Business.Components
 {
     public class DeliveryProvider : IDeliveryProvider
     {
-        public Guid SubmitDelivery(DeliveryCo.Business.Entities.DeliveryInfo pDeliveryInfo)
+        public void SubmitDelivery(DeliveryCo.Business.Entities.DeliveryInfo pDeliveryInfo)
         {
             using(TransactionScope lScope = new TransactionScope())
             using(DeliveryDataModelContainer lContainer = new DeliveryDataModelContainer())
@@ -24,8 +24,9 @@ namespace DeliveryCo.Business.Components
                 lContainer.SaveChanges();
                 ThreadPool.QueueUserWorkItem(new WaitCallback((pObj) => ScheduleDelivery(pDeliveryInfo)));
                 lScope.Complete();
+
             }
-            return pDeliveryInfo.DeliveryIdentifier;
+            //return pDeliveryInfo.DeliveryIdentifier;
         }
 
         private void ScheduleDelivery(DeliveryInfo pDeliveryInfo)
@@ -33,13 +34,13 @@ namespace DeliveryCo.Business.Components
             Console.WriteLine("Delivering to" + pDeliveryInfo.DestinationAddress);
             Thread.Sleep(3000);
             //notifying of delivery completion
-            using (TransactionScope lScope = new TransactionScope())
+        /*    using (TransactionScope lScope = new TransactionScope())
             using (DeliveryDataModelContainer lContainer = new DeliveryDataModelContainer())
             {
                 pDeliveryInfo.Status = 1;
                 IDeliveryNotificationService lService = DeliveryNotificationServiceFactory.GetDeliveryNotificationService(pDeliveryInfo.DeliveryNotificationAddress);
                 lService.NotifyDeliveryCompletion(pDeliveryInfo.DeliveryIdentifier, DeliveryInfoStatus.Delivered);
-            }
+            }*/
 
         }
     }

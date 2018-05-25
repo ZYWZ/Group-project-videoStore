@@ -21,9 +21,9 @@ namespace DeliveryCo.Services
         }
 
         [OperationBehavior(TransactionScopeRequired = true)]
-        public Guid SubmitDelivery(DeliveryInfo pDeliveryInfo)
+        public void SubmitDelivery(DeliveryInfo pDeliveryInfo)
         {
-            return DeliveryProvider.SubmitDelivery(
+                DeliveryProvider.SubmitDelivery(
                 MessageTypeConverter.Instance.Convert<DeliveryCo.MessageTypes.DeliveryInfo, 
                 DeliveryCo.Business.Entities.DeliveryInfo>(pDeliveryInfo)                
             );

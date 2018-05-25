@@ -17,7 +17,8 @@ namespace VideoStore.Business.Entities
                 }
                 else
                 {
-                    throw new Exception("Cannot place an order - no more stock for media item");
+                    //  throw new Exception("Cannot place an order - no more stock for media item");
+                    Console.WriteLine("Cannot place an order - no more stock for media item");
                 }
             }
         }

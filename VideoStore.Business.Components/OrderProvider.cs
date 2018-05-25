@@ -34,9 +34,12 @@ namespace VideoStore.Business.Components
                     try
                     {
                         pOrder.OrderNumber = Guid.NewGuid();
-                        TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0);
 
                         pOrder.UpdateStockLevels();
+
+                        TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0);
+
+                        
 
                         PlaceDeliveryForOrder(pOrder);
                         lContainer.Orders.ApplyChanges(pOrder);
@@ -99,19 +102,39 @@ namespace VideoStore.Business.Components
 
         private void PlaceDeliveryForOrder(Order pOrder)
         {
-            Delivery lDelivery = new Delivery() { DeliveryStatus = DeliveryStatus.Submitted, SourceAddress = "Video Store Address", DestinationAddress = pOrder.Customer.Address, Order = pOrder };
+            /*   Delivery lDelivery = new Delivery() { DeliveryStatus = DeliveryStatus.Submitted, SourceAddress = "Video Store Address", DestinationAddress = pOrder.Customer.Address, Order = pOrder };
 
-            Guid lDeliveryIdentifier = ExternalServiceFactory.Instance.DeliveryService.SubmitDelivery(new DeliveryInfo()
-            { 
-                OrderNumber = lDelivery.Order.OrderNumber.ToString(),  
+               Guid lDeliveryIdentifier = ExternalServiceFactory.Instance.DeliveryService.SubmitDelivery(new DeliveryInfo()
+               { 
+                   OrderNumber = lDelivery.Order.OrderNumber.ToString(),  
+                   SourceAddress = lDelivery.SourceAddress,
+                   DestinationAddress = lDelivery.DestinationAddress,
+                   DeliveryNotificationAddress = "net.tcp://localhost:9010/DeliveryNotificationService"
+               });
+
+               lDelivery.ExternalDeliveryIdentifier = lDeliveryIdentifier;
+               pOrder.Delivery = lDelivery;*/
+            Guid identifier = Guid.NewGuid();
+            Delivery lDelivery = new Delivery()
+            {
+                ExternalDeliveryIdentifier = identifier,
+                DeliveryStatus = DeliveryStatus.Submitted,
+                SourceAddress = "Video Store Address",
+                DestinationAddress = pOrder.Customer.Address,
+                Order = pOrder
+            };
+
+            DeliveryService.DeliveryServiceClient lClient = new DeliveryService.DeliveryServiceClient();
+            lClient.SubmitDelivery(new DeliveryInfo()
+            {
+                OrderNumber = lDelivery.Order.OrderNumber.ToString(),
                 SourceAddress = lDelivery.SourceAddress,
                 DestinationAddress = lDelivery.DestinationAddress,
                 DeliveryNotificationAddress = "net.tcp://localhost:9010/DeliveryNotificationService"
             });
-
-            lDelivery.ExternalDeliveryIdentifier = lDeliveryIdentifier;
+            lDelivery.ExternalDeliveryIdentifier = identifier;
             pOrder.Delivery = lDelivery;
-            
+
         }
 
         private void TransferFundsFromCustomer(int pCustomerAccountNumber, double pTotal)

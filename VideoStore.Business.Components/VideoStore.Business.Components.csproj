@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\DeliveryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\EmailTransferService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +128,16 @@
     <None Include="Service References\BankTransferService\service21.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\DeliveryService\DeliveryCo.MessageTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeliveryService\service.wsdl" />
+    <None Include="Service References\DeliveryService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeliveryService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EmailTransferService\EmailService.MessageTypes.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -136,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BankTransferService\" />
+    <WCFMetadataStorage Include="Service References\DeliveryService\" />
     <WCFMetadataStorage Include="Service References\EmailTransferService\" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +174,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\EmailTransferService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeliveryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeliveryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeliveryService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
