@@ -18,8 +18,9 @@ namespace VideoStore.Business.Components
 
         public void NotifyDeliveryCompletion(Guid pDeliverId, Entities.DeliveryStatus status)
         {
+            Console.WriteLine("pDeliverStatus : " + status);
             Order lAffectedOrder = RetrieveDeliveryOrder(pDeliverId);
-          //  UpdateDeliveryStatus(pDeliveryId, status);
+            UpdateDeliveryStatus(pDeliverId, status);
             if (status == Entities.DeliveryStatus.Delivered)
             {
                 EmailProvider.SendMessage(new EmailMessage()
@@ -58,7 +59,7 @@ namespace VideoStore.Business.Components
  	        using(VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
             {
                 Delivery lDelivery =  lContainer.Deliveries.Include("Order.Customer").Where((pDel) => pDel.ExternalDeliveryIdentifier == pDeliverId).FirstOrDefault();
-             //   Console.WriteLine("pDeliverId : "+pDeliverId);
+           //     Console.WriteLine("pDeliverId : "+pDeliverId);
                 return lDelivery.Order;
             }
         }

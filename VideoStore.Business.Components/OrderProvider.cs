@@ -8,6 +8,7 @@ using System.Transactions;
 using Microsoft.Practices.ServiceLocation;
 using DeliveryCo.MessageTypes;
 
+
 namespace VideoStore.Business.Components
 {
     public class OrderProvider : IOrderProvider
@@ -33,13 +34,20 @@ namespace VideoStore.Business.Components
                 {
                     try
                     {
-                        pOrder.OrderNumber = Guid.NewGuid();                     
+                        pOrder.OrderNumber = Guid.NewGuid();
+                        
+                        if (pOrder.UpdateStockLevels())
+                        {
+                            
+                            TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0, pOrder.OrderNumber.ToString());
+                           // PlaceDeliveryForOrder(pOrder);
+                        }
+                        else {
+                            throw new Exception("Insufficient stock!");
+                        }
 
-                        TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0);
+                        Console.WriteLine("bbbbbbbbbbbb " + pOrder.OrderItems.Count);
 
-                        pOrder.UpdateStockLevels();
-
-                        PlaceDeliveryForOrder(pOrder);
                         lContainer.Orders.ApplyChanges(pOrder);
          
                         lContainer.SaveChanges();
@@ -48,12 +56,12 @@ namespace VideoStore.Business.Components
                     }
                     catch (Exception lException)
                     {
-                        SendOrderErrorMessage(pOrder, lException);
+                      //  SendOrderErrorMessage(pOrder, lException);
                         throw;
                     }
                 }
             }
-            SendOrderPlacedConfirmation(pOrder);
+          //  SendOrderPlacedConfirmation(pOrder);
         }
 
         private void MarkAppropriateUnchangedAssociations(Order pOrder)
@@ -78,76 +86,25 @@ namespace VideoStore.Business.Components
             }
         }
 
-        
-
-        private void SendOrderErrorMessage(Order pOrder, Exception pException)
-        {
-            EmailProvider.SendMessage(new EmailMessage()
-            {
-                ToAddress = pOrder.Customer.Email,
-                Message = "There was an error in processsing your order " + pOrder.OrderNumber + ": "+ pException.Message +". Please contact Video Store"
-            });
-        }
-
-        private void SendOrderPlacedConfirmation(Order pOrder)
-        {
-            EmailProvider.SendMessage(new EmailMessage()
-            {
-                ToAddress = pOrder.Customer.Email,
-                Message = "Your order " + pOrder.OrderNumber + " has been placed"
-            });
-        }
-
-        private void PlaceDeliveryForOrder(Order pOrder)
-        {
-            /*   Delivery lDelivery = new Delivery() { DeliveryStatus = DeliveryStatus.Submitted, SourceAddress = "Video Store Address", DestinationAddress = pOrder.Customer.Address, Order = pOrder };
-
-               Guid lDeliveryIdentifier = ExternalServiceFactory.Instance.DeliveryService.SubmitDelivery(new DeliveryInfo()
-               { 
-                   OrderNumber = lDelivery.Order.OrderNumber.ToString(),  
-                   SourceAddress = lDelivery.SourceAddress,
-                   DestinationAddress = lDelivery.DestinationAddress,
-                   DeliveryNotificationAddress = "net.tcp://localhost:9010/DeliveryNotificationService"
-               });
-
-               lDelivery.ExternalDeliveryIdentifier = lDeliveryIdentifier;
-               pOrder.Delivery = lDelivery;*/
-            Guid identifier = Guid.NewGuid();
-            Delivery lDelivery = new Delivery()
-            {
-                ExternalDeliveryIdentifier = identifier,
-                DeliveryStatus = DeliveryStatus.Submitted,
-                SourceAddress = "Video Store Address",
-                DestinationAddress = pOrder.Customer.Address,
-                Order = pOrder
-            };
-
-            DeliveryService.DeliveryServiceClient lClient = new DeliveryService.DeliveryServiceClient();
-            lClient.SubmitDelivery(new DeliveryInfo()
-            {
-                OrderNumber = lDelivery.Order.OrderNumber.ToString(),
-                SourceAddress = lDelivery.SourceAddress,
-                DestinationAddress = lDelivery.DestinationAddress,
-                DeliveryNotificationAddress = "net.tcp://localhost:9010/DeliveryNotificationService",
-                DeliveryIdentifier = identifier
-            });
-            lDelivery.ExternalDeliveryIdentifier = identifier;
-          //  Console.WriteLine("External : "+ lDelivery.ExternalDeliveryIdentifier);
-            pOrder.Delivery = lDelivery;
-
-        }
-
-        private void TransferFundsFromCustomer(int pCustomerAccountNumber, double pTotal)
+        private void TransferFundsFromCustomer(int pCustomerAccountNumber, double pTotal, string pOrderNumber)
         {
             try
             {
                 //ExternalServiceFactory.Instance.TransferService.Transfer(pTotal, pCustomerAccountNumber, RetrieveVideoStoreAccountNumber());
                 BankTransferService.TransferServiceClient lClient = new BankTransferService.TransferServiceClient();
-                lClient.Transfer(pTotal, pCustomerAccountNumber, RetrieveVideoStoreAccountNumber());
+                lClient.Transfer(pTotal, pCustomerAccountNumber, RetrieveVideoStoreAccountNumber(), pOrderNumber);
             }
             catch(Exception e)
             {
                 throw new Exception("Error Transferring funds for order."+e.Message);
+            }
+        }
+
+        public Order GetOrderByOrderNumber(Guid pOrderNumber)
+        {
+            using (var lContainer = new VideoStoreEntityModelContainer())
+            {
+                return lContainer.Orders.Include("Customer").Where((pOrder) => (pOrder.OrderNumber == pOrderNumber)).FirstOrDefault();
             }
         }
 

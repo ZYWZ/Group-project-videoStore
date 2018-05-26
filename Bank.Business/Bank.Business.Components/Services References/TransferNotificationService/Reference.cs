@@ -16,7 +16,7 @@ namespace Bank.Business.Components.TransferNotificationService {
     public interface ITransferNotificationService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ITransferNotificationService/NotifyTransferResult")]
-        void NotifyTransferResult(bool pResult, string pDescription);
+        void NotifyTransferResult(bool pResult, string pDescription, string pOrderNumber);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -46,8 +46,8 @@ namespace Bank.Business.Components.TransferNotificationService {
                 base(binding, remoteAddress) {
         }
         
-        public void NotifyTransferResult(bool pResult, string pDescription) {
-            base.Channel.NotifyTransferResult(pResult, pDescription);
+        public void NotifyTransferResult(bool pResult, string pDescription, string pOrderNumber) {
+            base.Channel.NotifyTransferResult(pResult, pDescription, pOrderNumber);
         }
     }
 }

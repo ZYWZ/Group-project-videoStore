@@ -7,10 +7,12 @@ using System.ServiceModel;
 
 namespace VideoStore.Services.Interfaces
 {
+    public enum TransferInfoStatus { Transfered, Failed }
+
     [ServiceContract]
     public interface ITransferNotificationService
     {
         [OperationContract(IsOneWay = true)]
-        void NotifyTransferResult(bool pResult, String pDescription);
+        void NotifyTransferResult(bool pResult, String pDescription, string pOrderNumber);
     }
 }

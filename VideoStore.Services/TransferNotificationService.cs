@@ -19,8 +19,8 @@ namespace VideoStore.Services
             }
         }
 
-        public void NotifyTransferResult(bool pResult, String pDescription) {
-            Provider.NotifyTransferResult(pResult, pDescription);
+        public void NotifyTransferResult(bool pResult, String pDescription, string pOrderNumber) {
+            Provider.NotifyTransferResult(pResult, pDescription, pOrderNumber);
         }
     }
 }

@@ -16,10 +16,10 @@ namespace VideoStore.Business.Components.BankTransferService {
     public interface ITransferService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ITransferService/Transfer")]
-        void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber);
+        void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber, string pOrderNumber);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ITransferService/Transfer")]
-        System.Threading.Tasks.Task TransferAsync(double pAmount, int pFromAcctNumber, int pToAcctNumber);
+        System.Threading.Tasks.Task TransferAsync(double pAmount, int pFromAcctNumber, int pToAcctNumber, string pOrderNumber);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace VideoStore.Business.Components.BankTransferService {
                 base(binding, remoteAddress) {
         }
         
-        public void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber) {
-            base.Channel.Transfer(pAmount, pFromAcctNumber, pToAcctNumber);
+        public void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber, string pOrderNumber) {
+            base.Channel.Transfer(pAmount, pFromAcctNumber, pToAcctNumber, pOrderNumber);
         }
         
-        public System.Threading.Tasks.Task TransferAsync(double pAmount, int pFromAcctNumber, int pToAcctNumber) {
-            return base.Channel.TransferAsync(pAmount, pFromAcctNumber, pToAcctNumber);
+        public System.Threading.Tasks.Task TransferAsync(double pAmount, int pFromAcctNumber, int pToAcctNumber, string pOrderNumber) {
+            return base.Channel.TransferAsync(pAmount, pFromAcctNumber, pToAcctNumber, pOrderNumber);
         }
     }
 }

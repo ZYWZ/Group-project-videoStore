@@ -5,6 +5,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="pResult" type="xs:boolean" />
         <xs:element minOccurs="0" name="pDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOrderNumber" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

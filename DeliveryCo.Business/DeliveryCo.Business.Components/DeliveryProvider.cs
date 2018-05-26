@@ -21,7 +21,7 @@ namespace DeliveryCo.Business.Components
             {
                 try
                 {
-                    //   pDeliveryInfo.DeliveryIdentifier = Guid.NewGuid();
+                    //pDeliveryInfo.DeliveryIdentifier = Guid.NewGuid();
                     pDeliveryInfo.Status = 0;
                     lContainer.DeliveryInfoes.AddObject(pDeliveryInfo);
                     lContainer.SaveChanges();
@@ -41,7 +41,10 @@ namespace DeliveryCo.Business.Components
 
         private void ScheduleDelivery(DeliveryInfo pDeliveryInfo)
         {
+           // Thread.Sleep(TimeSpan.FromSeconds(3));
+
             Console.WriteLine("Delivering to" + pDeliveryInfo.DestinationAddress);
+            Console.WriteLine("DeliverID: " + pDeliveryInfo.DeliveryIdentifier);
             Thread.Sleep(3000);
             DeliveryNotificationService.DeliveryNotificationServiceClient lClient = new DeliveryNotificationService.DeliveryNotificationServiceClient();
             lClient.NotifyDeliveryCompletion(pDeliveryInfo.DeliveryIdentifier, DeliveryInfoStatus.Delivered);

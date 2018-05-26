@@ -7,6 +7,6 @@ namespace VideoStore.Business.Components.Interfaces
 {
     public interface ITransferNotificationProvider
     {
-        void NotifyTransferResult(bool pResult, string pDescription);
+        void NotifyTransferResult(bool pResult, string pDescription, string pOrderNumber);
     }
 }

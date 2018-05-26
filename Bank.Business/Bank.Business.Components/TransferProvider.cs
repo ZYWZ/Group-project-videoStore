@@ -13,7 +13,7 @@ namespace Bank.Business.Components
     {
 
 
-        public void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber)
+        public void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber, string pOrderNumber)
         {
             using (TransactionScope lScope = new TransactionScope())
             using (BankEntityModelContainer lContainer = new BankEntityModelContainer())
@@ -34,12 +34,12 @@ namespace Bank.Business.Components
 
                         Console.WriteLine("Transfered sucessfully! This payment cost : " + pAmount);
                         TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
-                        lClient.NotifyTransferResult(true, "Transfer successful! The amount is " + pAmount);
+                        lClient.NotifyTransferResult(true, "Transfer successful! The amount is " + pAmount, pOrderNumber);
                     }
                     else {
                         Console.WriteLine("Transfered failed!");
                         TransferNotificationService.ITransferNotificationService lClient = new TransferNotificationService.TransferNotificationServiceClient();
-                        lClient.NotifyTransferResult(false, "Transfer failed! Please check your bank account balance!");
+                        lClient.NotifyTransferResult(false, "Transfer failed! Please check your bank account balance!", pOrderNumber);
                     }
                     lScope.Complete();
 

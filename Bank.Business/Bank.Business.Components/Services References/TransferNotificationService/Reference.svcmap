@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8b9d5b0c-5377-4d3a-9bfe-ac5fdff3fcc3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b647679f-b8c1-467f-8616-99d0b98dc548" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,9 +21,9 @@
     <MetadataSource Address="net.tcp://localhost:9109/TransferNotificationService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c7845d48-ce64-4836-b4db-f9ed47aa1157" SourceId="1" SourceUrl="net.tcp://localhost:9109/TransferNotificationService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="aee091e9-b49f-4701-b092-8c66472306b0" SourceId="1" SourceUrl="net.tcp://localhost:9109/TransferNotificationService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="dff73630-0a22-4717-897c-cd5d1725ccaa" SourceId="1" SourceUrl="net.tcp://localhost:9109/TransferNotificationService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="12ad8104-fb12-4cad-a309-3b56beea4a0b" SourceId="1" SourceUrl="net.tcp://localhost:9109/TransferNotificationService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e333d2d6-221b-4ea7-a474-886bbdb7f6e0" SourceId="1" SourceUrl="net.tcp://localhost:9109/TransferNotificationService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="1de967e2-2902-48c1-b9cd-69fd9c7b5394" SourceId="1" SourceUrl="net.tcp://localhost:9109/TransferNotificationService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
