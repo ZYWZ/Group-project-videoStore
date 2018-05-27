@@ -44,19 +44,10 @@ namespace DeliveryCo.Business.Components
            // Thread.Sleep(TimeSpan.FromSeconds(3));
 
             Console.WriteLine("Delivering to" + pDeliveryInfo.DestinationAddress);
-            Console.WriteLine("DeliverID: " + pDeliveryInfo.DeliveryIdentifier);
+         //   Console.WriteLine("DeliverID: " + pDeliveryInfo.DeliveryIdentifier);
             Thread.Sleep(3000);
             DeliveryNotificationService.DeliveryNotificationServiceClient lClient = new DeliveryNotificationService.DeliveryNotificationServiceClient();
             lClient.NotifyDeliveryCompletion(pDeliveryInfo.DeliveryIdentifier, DeliveryInfoStatus.Delivered);
-            //notifying of delivery completion
-            /*    using (TransactionScope lScope = new TransactionScope())
-                using (DeliveryDataModelContainer lContainer = new DeliveryDataModelContainer())
-                {
-                    pDeliveryInfo.Status = 1;
-                    IDeliveryNotificationService lService = DeliveryNotificationServiceFactory.GetDeliveryNotificationService(pDeliveryInfo.DeliveryNotificationAddress);
-                    lService.NotifyDeliveryCompletion(pDeliveryInfo.DeliveryIdentifier, DeliveryInfoStatus.Delivered);
-                }*/
-
         }
     }
 }

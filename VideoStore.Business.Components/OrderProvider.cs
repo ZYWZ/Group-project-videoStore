@@ -7,12 +7,16 @@ using VideoStore.Business.Entities;
 using System.Transactions;
 using Microsoft.Practices.ServiceLocation;
 using DeliveryCo.MessageTypes;
+using VideoStore.Services;
+using System.Threading;
 
 
 namespace VideoStore.Business.Components
 {
     public class OrderProvider : IOrderProvider
     {
+        private bool TransferStatus;
+
         public IEmailProvider EmailProvider
         {
             get { return ServiceLocator.Current.GetInstance<IEmailProvider>(); }
@@ -37,31 +41,37 @@ namespace VideoStore.Business.Components
                         pOrder.OrderNumber = Guid.NewGuid();
                         
                         if (pOrder.UpdateStockLevels())
-                        {
-                            
+                        {                       
                             TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0, pOrder.OrderNumber.ToString());
-                           // PlaceDeliveryForOrder(pOrder);
                         }
                         else {
                             throw new Exception("Insufficient stock!");
                         }
-
-                        Console.WriteLine("bbbbbbbbbbbb " + pOrder.OrderItems.Count);
-
+                         
                         lContainer.Orders.ApplyChanges(pOrder);
          
                         lContainer.SaveChanges();
-                        lScope.Complete();
-                        
+                        lScope.Complete();                     
                     }
                     catch (Exception lException)
                     {
                       //  SendOrderErrorMessage(pOrder, lException);
                         throw;
                     }
+                    
+
                 }
             }
-          //  SendOrderPlacedConfirmation(pOrder);
+            Thread.Sleep(TimeSpan.FromSeconds(5));
+            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            {
+                if (!Status.bankInfoStatus) { 
+                    pOrder.RollbackStockLevels();
+                    throw new Exception("Insufficient account balance!");
+                }
+                lContainer.Orders.ApplyChanges(pOrder);
+                lContainer.SaveChanges();
+            }
         }
 
         private void MarkAppropriateUnchangedAssociations(Order pOrder)
@@ -104,7 +114,7 @@ namespace VideoStore.Business.Components
         {
             using (var lContainer = new VideoStoreEntityModelContainer())
             {
-                return lContainer.Orders.Include("Customer").Where((pOrder) => (pOrder.OrderNumber == pOrderNumber)).FirstOrDefault();
+                return lContainer.Orders.Include("Customer").Include("OrderItems").Where((pOrder) => (pOrder.OrderNumber == pOrderNumber)).FirstOrDefault();
             }
         }
 
@@ -114,6 +124,33 @@ namespace VideoStore.Business.Components
             return 123;
         }
 
+        private void RollbackOrder(Order pOrder)
+        {
+            using (TransactionScope lScope = new TransactionScope())
+            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            {
+                //    Order lOrder = lContainer.Orders.Where(o => o.OrderNumber == pOrderNumber).SingleOrDefault();
+                if (pOrder != null)
+                {
+                    //    LoadMediaStocks(pOrder);
+                    //    Console.WriteLine("aaaaaaaaaaaaaaaaaaaa");
+                    pOrder.RollbackStockLevels();
+                    lContainer.Orders.ApplyChanges(pOrder);
+                    lContainer.SaveChanges();
+                }
+                lScope.Complete();
+            }
+        }
+
+        public void setTransferStatus(bool Status)
+        {
+            TransferStatus = Status;
+        }
+        public bool getTransferStatus() { 
+            
+                return TransferStatus;
+            
+        }
 
     }
 }

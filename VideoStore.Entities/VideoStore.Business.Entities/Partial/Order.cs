@@ -30,7 +30,6 @@ namespace VideoStore.Business.Entities
         {
             foreach (OrderItem lItem in this.OrderItems)
             {
-                Console.WriteLine(lItem.Media.Stocks.Quantity);
                 lItem.Media.Stocks.Quantity += lItem.Quantity;
             }
         }

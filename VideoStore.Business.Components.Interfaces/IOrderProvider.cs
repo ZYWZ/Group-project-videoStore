@@ -10,5 +10,6 @@ namespace VideoStore.Business.Components.Interfaces
     {
         void SubmitOrder(Order pOrder);
         Order GetOrderByOrderNumber(Guid pOrderNumber);
+        void setTransferStatus(bool Status);
     }
 }
