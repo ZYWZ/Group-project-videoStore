@@ -47,7 +47,7 @@ namespace VideoStore.Business.Components
                         else {
                             throw new Exception("Insufficient stock!");
                         }
-                         
+                        
                         lContainer.Orders.ApplyChanges(pOrder);
          
                         lContainer.SaveChanges();
@@ -62,15 +62,10 @@ namespace VideoStore.Business.Components
 
                 }
             }
-            Thread.Sleep(TimeSpan.FromSeconds(5));
-            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
-            {
-                if (!Status.bankInfoStatus) { 
-                    pOrder.RollbackStockLevels();
-                    throw new Exception("Insufficient account balance!");
-                }
-                lContainer.Orders.ApplyChanges(pOrder);
-                lContainer.SaveChanges();
+            Thread.Sleep(TimeSpan.FromSeconds(3));
+            if (!Status.bankInfoStatus) {
+                RollbackOrder(pOrder);
+                throw new Exception("Insufficient account balance!");
             }
         }
 
@@ -129,11 +124,8 @@ namespace VideoStore.Business.Components
             using (TransactionScope lScope = new TransactionScope())
             using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
             {
-                //    Order lOrder = lContainer.Orders.Where(o => o.OrderNumber == pOrderNumber).SingleOrDefault();
                 if (pOrder != null)
                 {
-                    //    LoadMediaStocks(pOrder);
-                    //    Console.WriteLine("aaaaaaaaaaaaaaaaaaaa");
                     pOrder.RollbackStockLevels();
                     lContainer.Orders.ApplyChanges(pOrder);
                     lContainer.SaveChanges();
