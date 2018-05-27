@@ -38,10 +38,11 @@ namespace VideoStore.Business.Components
                 {
                     try
                     {
+
                         pOrder.OrderNumber = Guid.NewGuid();
                         
-                        if (pOrder.UpdateStockLevels())
-                        {                       
+                        if (pOrder.CheckStockLevels())
+                        {
                             TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0, pOrder.OrderNumber.ToString());
                         }
                         else {
@@ -57,15 +58,18 @@ namespace VideoStore.Business.Components
                     {
                       //  SendOrderErrorMessage(pOrder, lException);
                         throw;
-                    }
-                    
-
+                    }              
                 }
             }
             Thread.Sleep(TimeSpan.FromSeconds(3));
-            if (!Status.bankInfoStatus) {
-                RollbackOrder(pOrder);
+            Console.WriteLine(Status.bankInfoStatus);
+            if (!Status.bankInfoStatus)
+            {
+              //  RollbackOrder(pOrder);
                 throw new Exception("Insufficient account balance!");
+            }
+            else {
+                UpdateOrderStock(pOrder);
             }
         }
 
@@ -127,6 +131,23 @@ namespace VideoStore.Business.Components
                 if (pOrder != null)
                 {
                     pOrder.RollbackStockLevels();
+                    lContainer.Orders.ApplyChanges(pOrder);
+                    lContainer.SaveChanges();
+                }
+                lScope.Complete();
+            }
+        }
+
+        private void UpdateOrderStock(Order pOrder)
+        {
+            using (TransactionScope lScope = new TransactionScope())
+            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            {
+                if (pOrder != null)
+                {
+                    LoadMediaStocks(pOrder);
+                    MarkAppropriateUnchangedAssociations(pOrder);
+                    pOrder.UpdateStockLevels();
                     lContainer.Orders.ApplyChanges(pOrder);
                     lContainer.SaveChanges();
                 }

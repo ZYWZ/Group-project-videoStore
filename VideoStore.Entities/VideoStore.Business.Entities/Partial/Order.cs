@@ -7,7 +7,20 @@ namespace VideoStore.Business.Entities
 {
     public partial class Order
     {
-        public bool UpdateStockLevels()
+        public bool CheckStockLevels()
+        {
+            bool flag = true;
+            foreach (OrderItem lItem in this.OrderItems)
+            {
+                if (lItem.Media.Stocks.Quantity - lItem.Quantity < 0)
+                {
+                    flag = false;
+                }
+            }
+            return flag;
+        }
+
+        public void UpdateStockLevels()
         {
             bool flag = true;
             foreach (OrderItem lItem in this.OrderItems)
@@ -18,12 +31,10 @@ namespace VideoStore.Business.Entities
                 }
                 else
                 {
-                    //  throw new Exception("Cannot place an order - no more stock for media item");
-                    Console.WriteLine("Cannot place an order - no more stock for media item");
-                    return false;
+                    throw new Exception("Cannot place an order - no more stock for media item");
+
                 }
             }
-            return flag;
         }
 
         public void RollbackStockLevels()
