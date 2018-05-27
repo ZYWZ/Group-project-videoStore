@@ -26,7 +26,6 @@ namespace VideoStore.Business.Components
             using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
             {
                 Order lOrder = ServiceLocator.Current.GetInstance<IOrderProvider>().GetOrderByOrderNumber(Guid.Parse(pOrderNumber));             
-              //  Console.WriteLine("bbbbbbbbbbbb " + lOrder.OrderItems[0].Media.Title);
                 if (lOrder != null)
                 {
                     if (pResult)
@@ -67,34 +66,6 @@ namespace VideoStore.Business.Components
             });
         }
 
-        private static void RollbackOrder(Guid orderNumber)
-        {
-            using (var lScope = new TransactionScope())
-            using (var lContainer = new VideoStoreEntityModelContainer())
-            {
-                Order order = lContainer.Orders.Include("OrderItems").Where(o => o.OrderNumber == orderNumber).SingleOrDefault();
-             //   Console.WriteLine(order.OrderItems[0].Quantity);
-                if (order != null)
-                {
-                    Console.WriteLine("Roll back the order!");
-                    order.RollbackStockLevels();
-                    lContainer.SaveChanges();
-                }
-                lScope.Complete();
-            }
-        }
-
-        private void MarkAppropriateUnchangedAssociations(Order pOrder)
-        {
-            pOrder.Customer.MarkAsUnchanged();
-            pOrder.Customer.LoginCredential.MarkAsUnchanged();
-            foreach (OrderItem lOrder in pOrder.OrderItems)
-            {
-                lOrder.Media.Stocks.MarkAsUnchanged();
-                lOrder.Media.MarkAsUnchanged();
-            }
-        }
-
         private void PlaceDeliveryForOrder(Order pOrder)
         {
             Guid identifier = Guid.NewGuid();
@@ -120,17 +91,6 @@ namespace VideoStore.Business.Components
           //  Console.WriteLine("External : " + lDelivery.ExternalDeliveryIdentifier);
             pOrder.Delivery = lDelivery;
 
-        }
-
-        private void LoadMediaStocks(Order pOrder)
-        {
-            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
-            {
-                foreach (OrderItem lOrder in pOrder.OrderItems)
-                {
-                    lOrder.Media.Stocks = lContainer.Stocks.Where((pStock) => pStock.Media.Id == lOrder.Media.Id).FirstOrDefault();
-                }
-            }
         }
 
     }
