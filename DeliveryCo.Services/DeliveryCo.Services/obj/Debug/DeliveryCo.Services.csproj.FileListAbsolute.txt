@@ -52,3 +52,25 @@ C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Services\DeliveryCo.Servic
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Services.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Services.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\AutoMapper.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Business.Entities.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\DeliveryCo.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\AutoMapper.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\AutoMapper.xml
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\bin\Debug\AutoMapper.Net4.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Services\DeliveryCo.Services\obj\Debug\DeliveryCo.Services.pdb

@@ -8,3 +8,9 @@ C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.MessageTypes\bin\Debug\E
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.pdb
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.MessageTypes\bin\Debug\EmailService.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.MessageTypes\bin\Debug\EmailService.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.MessageTypes\obj\Debug\EmailService.MessageTypes.pdb

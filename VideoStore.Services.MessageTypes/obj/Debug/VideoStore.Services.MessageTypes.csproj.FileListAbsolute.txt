@@ -63,3 +63,14 @@ C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.MessageTypes\bin\
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\bin\Debug\VideoStore.Services.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\bin\Debug\VideoStore.Services.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\bin\Debug\Common.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\bin\Debug\Common.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.MessageTypes\obj\Debug\VideoStore.Services.MessageTypes.pdb

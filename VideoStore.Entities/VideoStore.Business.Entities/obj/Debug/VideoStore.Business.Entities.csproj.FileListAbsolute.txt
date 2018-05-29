@@ -48,3 +48,13 @@ C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Entities\VideoStore.Busine
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\Common.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\Common.pdb
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Entities\VideoStore.Business.Entities\obj\Debug\VideoStore.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\VideoStore.Business.Entities.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\VideoStore.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\VideoStore.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\Common.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\bin\Debug\Common.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\obj\Debug\VideoStore.Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\obj\Debug\VideoStore.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\obj\Debug\VideoStore.Business.Entities.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\obj\Debug\VideoStore.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Entities\VideoStore.Business.Entities\obj\Debug\VideoStore.Business.Entities.pdb

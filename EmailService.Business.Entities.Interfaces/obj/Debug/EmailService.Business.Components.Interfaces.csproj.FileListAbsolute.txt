@@ -14,3 +14,12 @@ C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interf
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Entities.Interfaces\obj\Debug\EmailService.Business.Components.Interfaces.pdb

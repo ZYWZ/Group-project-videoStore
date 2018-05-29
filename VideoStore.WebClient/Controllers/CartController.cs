@@ -42,7 +42,7 @@ namespace VideoStore.WebClient.Controllers
             {
                 pCart.Clear();
                 pUser.UpdateUserCache();
-                return RedirectToAction("ErrorPage");
+                return RedirectToAction("InsufficientStock");
             }
             return View(new CheckOutViewModel(pUser.Model));
         }

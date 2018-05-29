@@ -22,7 +22,6 @@ namespace VideoStore.Business.Entities
 
         public void UpdateStockLevels()
         {
-            bool flag = true;
             foreach (OrderItem lItem in this.OrderItems)
             {
                 if (lItem.Media.Stocks.Quantity - lItem.Quantity >= 0)
@@ -41,7 +40,14 @@ namespace VideoStore.Business.Entities
         {
             foreach (OrderItem lItem in this.OrderItems)
             {
-                lItem.Media.Stocks.Quantity += lItem.Quantity;
+                try
+                {
+                    lItem.Media.Stocks.Quantity += lItem.Quantity;
+                }
+                catch(Exception e)
+                {
+                    throw new Exception("Error occurs while roll back"+e.Message);
+                }
             }
         }
     }

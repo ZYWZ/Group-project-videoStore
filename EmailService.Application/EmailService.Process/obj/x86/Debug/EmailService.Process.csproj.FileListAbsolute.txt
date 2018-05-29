@@ -66,3 +66,33 @@ C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Application\EmailService
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.exe
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Process.exe.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Process.exe
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Process.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Services.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\Microsoft.Practices.Unity.ServiceLocatorAdapter.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\Microsoft.Practices.Unity.StaticFactory.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\AutoMapper.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Business.Components.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Services.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\EmailService.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\AutoMapper.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\bin\Debug\AutoMapper.xml
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.exe
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Application\EmailService.Process\obj\x86\Debug\EmailService.Process.pdb

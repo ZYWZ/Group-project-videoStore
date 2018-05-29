@@ -32,3 +32,15 @@ C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Services\bin\Debug
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Services\obj\Debug\Bank.Services.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Services\obj\Debug\Bank.Services.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Services\obj\Debug\Bank.Services.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Bank.Services.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Bank.Services.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Bank.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Bank.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Bank.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\bin\Debug\Bank.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\obj\Debug\Bank.Services.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\obj\Debug\Bank.Services.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\obj\Debug\Bank.Services.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\obj\Debug\Bank.Services.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Services\obj\Debug\Bank.Services.pdb

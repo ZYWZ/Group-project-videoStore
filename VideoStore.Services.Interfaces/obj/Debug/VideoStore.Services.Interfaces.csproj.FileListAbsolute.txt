@@ -117,3 +117,14 @@ C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.Interfaces\bin\De
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\bin\Debug\VideoStore.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\bin\Debug\VideoStore.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\bin\Debug\VideoStore.Services.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\bin\Debug\VideoStore.Services.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\VideoStore.Services.Interfaces\obj\Debug\VideoStore.Services.Interfaces.pdb

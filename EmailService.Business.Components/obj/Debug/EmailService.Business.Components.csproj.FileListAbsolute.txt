@@ -18,3 +18,14 @@ C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Components\bin\
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.csprojResolveAssemblyReference.cache
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\bin\Debug\EmailService.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\bin\Debug\EmailService.Business.Components.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\bin\Debug\EmailService.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\bin\Debug\EmailService.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\EmailService.Business.Components\obj\Debug\EmailService.Business.Components.pdb

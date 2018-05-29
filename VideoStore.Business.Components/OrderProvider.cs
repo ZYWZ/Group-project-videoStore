@@ -29,7 +29,6 @@ namespace VideoStore.Business.Components
 
         public void SubmitOrder(Entities.Order pOrder)
         {
-           
             using (TransactionScope lScope = new TransactionScope())
             {
                 LoadMediaStocks(pOrder);
@@ -38,38 +37,27 @@ namespace VideoStore.Business.Components
                 {
                     try
                     {
-
                         pOrder.OrderNumber = Guid.NewGuid();
-                        
                         if (pOrder.CheckStockLevels())
                         {
+                            pOrder.UpdateStockLevels();
                             TransferFundsFromCustomer(UserProvider.ReadUserById(pOrder.Customer.Id).BankAccountNumber, pOrder.Total ?? 0.0, pOrder.OrderNumber.ToString());
                         }
                         else {
+                            Console.WriteLine("Insufficient stock");
                             throw new Exception("Insufficient stock!");
                         }
                         
                         lContainer.Orders.ApplyChanges(pOrder);
-         
                         lContainer.SaveChanges();
                         lScope.Complete();                     
                     }
                     catch (Exception lException)
                     {
-                      //  SendOrderErrorMessage(pOrder, lException);
+                        Console.WriteLine("Error occured while upload stocks: " + lException.Message);
                         throw;
                     }              
                 }
-            }
-            Thread.Sleep(TimeSpan.FromSeconds(3));
-            Console.WriteLine(Status.bankInfoStatus);
-            if (!Status.bankInfoStatus)
-            {
-              //  RollbackOrder(pOrder);
-                throw new Exception("Insufficient account balance!");
-            }
-            else {
-                UpdateOrderStock(pOrder);
             }
         }
 
@@ -113,10 +101,11 @@ namespace VideoStore.Business.Components
         {
             using (var lContainer = new VideoStoreEntityModelContainer())
             {
-                return lContainer.Orders.Include("Customer").Include("OrderItems").Where((pOrder) => (pOrder.OrderNumber == pOrderNumber)).FirstOrDefault();
+                return lContainer.Orders.Include("Customer.LoginCredential").Include("OrderItems.Media")
+                                        .Where((pOrder) => (pOrder.OrderNumber == pOrderNumber))
+                                        .FirstOrDefault();
             }
         }
-
 
         private int RetrieveVideoStoreAccountNumber()
         {
@@ -131,23 +120,6 @@ namespace VideoStore.Business.Components
                 if (pOrder != null)
                 {
                     pOrder.RollbackStockLevels();
-                    lContainer.Orders.ApplyChanges(pOrder);
-                    lContainer.SaveChanges();
-                }
-                lScope.Complete();
-            }
-        }
-
-        private void UpdateOrderStock(Order pOrder)
-        {
-            using (TransactionScope lScope = new TransactionScope())
-            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
-            {
-                if (pOrder != null)
-                {
-                    LoadMediaStocks(pOrder);
-                    MarkAppropriateUnchangedAssociations(pOrder);
-                    pOrder.UpdateStockLevels();
                     lContainer.Orders.ApplyChanges(pOrder);
                     lContainer.SaveChanges();
                 }

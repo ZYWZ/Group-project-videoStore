@@ -36,3 +36,18 @@ C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Component
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.dll
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.pdb
 C:\Users\章鱼丸子\Desktop\GroupProject\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Entities.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.pdb

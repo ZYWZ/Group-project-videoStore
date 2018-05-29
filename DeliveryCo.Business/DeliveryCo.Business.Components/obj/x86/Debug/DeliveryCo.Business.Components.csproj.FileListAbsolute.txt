@@ -40,3 +40,31 @@ C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Business\DeliveryCo.Busine
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\Common.pdb
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Services.MessageTypes.pdb
 C:\Users\章鱼丸子\Desktop\GroupProject\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Components.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Components.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Components.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Business.Entities.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Services.Interfaces.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\Common.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Services.MessageTypes.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Business.Entities.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Services.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Components.Interfaces.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Entities.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.Business.Entities.dll.config
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\DeliveryCo.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\Common.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\VideoStore.Services.MessageTypes.pdb
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\obj\x86\Debug\DeliveryCo.Business.Components.csprojResolveAssemblyReference.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\obj\x86\Debug\DeliveryCo.Business.Components.csproj.CoreCompileInputs.cache
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\obj\x86\Debug\DeliveryCo.Business.Components.csproj.CopyComplete
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\obj\x86\Debug\DeliveryCo.Business.Components.dll
+C:\Users\Yangkai Hong\Desktop\Group-project-videoStore\DeliveryCo.Business\DeliveryCo.Business.Components\obj\x86\Debug\DeliveryCo.Business.Components.pdb

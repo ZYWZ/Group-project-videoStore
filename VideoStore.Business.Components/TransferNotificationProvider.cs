@@ -21,31 +21,37 @@ namespace VideoStore.Business.Components
         }
 
         public void NotifyTransferResult(bool pResult, string pDescription, string pOrderNumber) {
-            Console.WriteLine(pDescription);
-            
-            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            using (TransactionScope lScope = new TransactionScope())
             {
-                Order lOrder = ServiceLocator.Current.GetInstance<IOrderProvider>().GetOrderByOrderNumber(Guid.Parse(pOrderNumber));             
-              //  Console.WriteLine("bbbbbbbbbbbb " + lOrder.OrderItems[0].Media.Title);
-                if (lOrder != null)
+                Console.WriteLine(pDescription);
+                using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
                 {
-                    if (pResult)
+                    Order lOrder = ServiceLocator.Current.GetInstance<IOrderProvider>().GetOrderByOrderNumber(Guid.Parse(pOrderNumber));
+                    LoadMediaStocks(lOrder);
+                    MarkAppropriateUnchangedAssociations(lOrder);
+                    Console.WriteLine(lOrder.OrderItems[0].Media.Stocks.Quantity);
+                    Console.WriteLine(lOrder.OrderItems[0].Quantity);
+                    if (lOrder != null)
                     {
-                        Status.bankInfoStatus = true;
-                        SendOrderPlacedConfirmation(lOrder);
-                        PlaceDeliveryForOrder(lOrder);
+                       
+                            if (pResult)
+                            {
+                                SendOrderPlacedConfirmation(lOrder);
+                                PlaceDeliveryForOrder(lOrder);
+                            }
+                            else
+                            {
+                                SendOrderErrorMessage(lOrder);
+                                Console.WriteLine("Stocks have been rolled back");
+                                lOrder.RollbackStockLevels();
+                              
+                            }
+                       
                     }
-                    else
-                    {
-                        Status.bankInfoStatus = false;
-                        SendOrderErrorMessage(lOrder);
-                    //    LoadMediaStocks(lOrder);
-                    //    MarkAppropriateUnchangedAssociations(lOrder);
-                    //    RollbackOrder(lOrder.OrderNumber);
-                    }
+                    lContainer.Orders.ApplyChanges(lOrder);
+                    lContainer.SaveChanges();
+                    lScope.Complete();
                 }
-                lContainer.Orders.ApplyChanges(lOrder);
-                lContainer.SaveChanges();
             }
         }
 
@@ -65,23 +71,6 @@ namespace VideoStore.Business.Components
                 ToAddress = pOrder.Customer.Email,
                 Message = "There is not enough account balance in your bank account for order: " + pOrder.OrderNumber
             });
-        }
-
-        private static void RollbackOrder(Guid orderNumber)
-        {
-            using (var lScope = new TransactionScope())
-            using (var lContainer = new VideoStoreEntityModelContainer())
-            {
-                Order order = lContainer.Orders.Include("OrderItems").Where(o => o.OrderNumber == orderNumber).SingleOrDefault();
-             //   Console.WriteLine(order.OrderItems[0].Quantity);
-                if (order != null)
-                {
-                    Console.WriteLine("Roll back the order!");
-                    order.RollbackStockLevels();
-                    lContainer.SaveChanges();
-                }
-                lScope.Complete();
-            }
         }
 
         private void MarkAppropriateUnchangedAssociations(Order pOrder)
